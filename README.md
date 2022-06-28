@@ -6,7 +6,7 @@ Front-end: HTML, CSS, Javascript, Vue.js, jQuery, Bootstrap
 
 Backend: Flask
 
-<span style="color: red;">Dummy Data</span>
+<span style='color:red;'>Dummy Data</span>
 
 ```json
 [
