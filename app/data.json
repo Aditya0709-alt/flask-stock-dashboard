@@ -1,14 +1,4 @@
-#### Implementing server-sent events using Flask
-
-Tech Stack Used
-
-Front-end: HTML, CSS, Javascript, Vue.js, jQuery, Bootstrap
-
-Backend: Flask
-
-```
-[
-    {
+[{
         "name": "Bharti Airtel Limited",
         "symbol": "BHARTIARTL",
         "open": 558.50,
@@ -51,4 +41,3 @@ Backend: Flask
         "low": 81.80
     }
 ]
-```
