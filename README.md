@@ -6,7 +6,9 @@ Front-end: HTML, CSS, Javascript, Vue.js, jQuery, Bootstrap
 
 Backend: Flask
 
-```
+<span style='color:red;'>Dummy Data</span>
+
+```json
 [
     {
         "name": "Bharti Airtel Limited",
@@ -52,3 +54,8 @@ Backend: Flask
     }
 ]
 ```
+
+#### GET /stream-stocks 
+
+<img width="1440" alt="Screenshot 2022-06-28 at 11 09 26 AM" src="https://user-images.githubusercontent.com/77115883/176102867-eb35002b-98ad-4101-8626-cf3ee11ab75f.png">
+
