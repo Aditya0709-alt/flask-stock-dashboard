@@ -6,7 +6,7 @@ Front-end: HTML, CSS, Javascript, Vue.js, jQuery, Bootstrap
 
 Backend: Flask
 
-==Dummy data==
+== Dummy data ==
 
 ```json
 [
