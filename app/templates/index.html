@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/cosmo/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+
+    <title>SSE Home</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-brand">SSE Demo</div>
+    </nav>
+
+    <div class="container-fluid" id="app">
+      <div class="row mt-4">
+        <div class="col">
+          <div class="jumbotron text-center">
+            <h1>[[ message.symbol ]]</h1>
+            <p class="text-muted">[[ message.name ]]</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4" v-for="s in stocks">
+          <div class="card mt-4">
+            <div class="card-header d-flex justify-content-between">
+              <span>[[ s.symbol ]]</span>
+              <span>
+                <span class="mr-2">[[ s.current ]]</span>
+                <span v-if="stocksHistory[s.symbol].increased">
+                  <i class="fa fa-caret-up text-success"></i>
+                  <span style="font-size: smaller"
+                    >[[ stocksHistory[s.symbol].changed ]]%</span
+                  >
+                </span>
+                <span v-if="!stocksHistory[s.symbol].increased">
+                  <i class="fa fa-caret-down text-danger"></i>
+                  <span style="font-size: smaller"
+                    >[[ stocksHistory[s.symbol].changed ]]%</span
+                  >
+                </span>
+              </span>
+            </div>
+            <div class="card-body p-1">
+              <canvas :id="s.symbol"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
